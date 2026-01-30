@@ -1,36 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Puthin Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puthin | Creative Portfolio</title>
 
-<style>
-body{
-  margin:0;
-  height:100vh;
-  background:linear-gradient(120deg,#000,#111,#000);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-family: 'Poppins', sans-serif;
-  overflow:hidden;
-}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-h1{
-  color:white;
-  font-size:50px;
-  letter-spacing:4px;
-  animation: float 2s infinite alternate;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-@keyframes float{
-  from{ transform: translateY(0); }
-  to{ transform: translateY(-25px); }
-}
-</style>
+    body {
+      background: #0b0b0b;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), #0b0b0b),
+                  url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      letter-spacing: 4px;
+      animation: fadeDown 1.5s ease;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      opacity: 0.8;
+      animation: fadeUp 2s ease;
+    }
+
+    .section {
+      padding: 80px 10%;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+
+    .about p {
+      max-width: 700px;
+      line-height: 1.8;
+      opacity: 0.85;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .skill-box {
+      padding: 30px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      transition: 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      opacity: 0.85;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    .music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      color: #000;
+      padding: 12px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      .section { padding: 60px 6%; }
+    }
+  </style>
 </head>
-
 <body>
-  <h1>PUTHIN ✨</h1>
+
+  <!-- HERO -->
+  <header>
+    <div>
+      <h1>PUTHIN</h1>
+      <p>Photographer / Cinematographer & Web / Creative Designer</p>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section about">
+    <h2>About Me</h2>
+    <p>
+      I am a creative professional specializing in photography, cinematography, and modern web design.
+      With a strong eye for detail and aesthetics, I create visually powerful content and clean,
+      premium digital experiences. My work focuses on storytelling, brand presence, and delivering
+      high-quality results that leave a lasting impression.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-box">Photography</div>
+      <div class="skill-box">Photo Editing</div>
+      <div class="skill-box">Web Design</div>
+      <div class="skill-box">Video Editing</div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" />
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" />
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" />
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact">
+    <h2>Contact</h2>
+    <p>📞 8125044735 / 9010744735</p>
+    <p>📸 Instagram: @puthin_thallapally</p>
+    <p>📧 puthinthallapally@gmail.com</p>
+  </section>
+
+  <footer>
+    © 2026 Puthin. All Rights Reserved.
+  </footer>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="music-btn" onclick="toggleMusic()">🎵 Play Music</div>
+
+  <script>
+    let playing = false;
+    function toggleMusic() {
+      const music = document.getElementById("bgMusic");
+      const btn = document.querySelector(".music-btn");
+      if (!playing) {
+        music.play();
+        btn.innerText = "⏸ Pause Music";
+      } else {
+        music.pause();
+        btn.innerText = "🎵 Play Music";
+      }
+      playing = !playing;
+    }
+  </script>
+
 </body>
 </html>
