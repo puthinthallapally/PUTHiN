@@ -208,27 +208,6 @@
   <footer>
     © 2026 Puthinthallapally. All Rights Reserved.
   </footer>
-
-  <!-- MUSIC -->
-  <audio id="bgMusic" loop>
-  <source src="AA23_Bgm_Ringtone_Allu_Arjun.mp3" type="audio/mpeg">
-</audio>
-  <div class="music-btn" onclick="toggleMusic()">🎵 Play Music</div>
-
-  <script>
-    let playing = false;
-    function toggleMusic() {
-      const music = document.getElementById("bgMusic");
-      const btn = document.querySelector(".music-btn");
-      if (!playing) {
-        music.play();
-        btn.innerText = "⏸ Pause Music";
-      } else {
-        music.pause();
-        btn.innerText = "🎵 Play Music";
-      }
-      playing = !playing;
-    }
   </script>
 
 </body>
